@@ -1,7 +1,7 @@
-function Btn() {
+function Btn(props) {
     return(
         <>
-        <button>Click Me!!!</button>
+       <button type='submit'>{props.btn}</button>
         </>
     )
 }

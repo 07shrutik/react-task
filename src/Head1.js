@@ -1,7 +1,7 @@
-function Head1() {
+function Head1(props) {
     return(
         <>
-        <h1>I am heading one ... from first component</h1>
+        <h1>{props.content}</h1>
         </>
     )
 }

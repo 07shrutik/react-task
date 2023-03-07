@@ -1,45 +1,13 @@
-// import './App.css';
-
-function Head1() {
-  return(
-      <>
-      <h1>I am heading one ... from first component</h1>
-      </>
-  )
-}
-
-function Head2() {
-  return(
-      <>
-      <h2>I am heading two ... from second component</h2>
-      </>
-  )
-}
-
-function Head3() {
-  return(
-      <>
-      <h3>I am heading three ... from thirf component</h3>
-      </>
-  )
-}
-
-function Btn() {
-  return(
-      <>
-      <button>Click Me!!!</button>
-      </>
-  )
-}
+import './App.css';
 
 function Challenge1() {
   return (
-    <>
-    <Head1 />
-    <Head2 />
-    <Head3 />
-    <Btn />
-    </>
+    <div className='container'>
+      <h1>Register here...</h1>
+      <input type="text" placeholder="mobile ..."/>
+      <input type="password" placeholder="password ..."/>
+      <button type='submit'>Submit</button>
+    </div>
   );
 }
 
