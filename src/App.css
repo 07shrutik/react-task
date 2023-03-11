@@ -24,3 +24,7 @@ body{
   /* padding-top: 10px; */
   width: 75px;
 }
+
+.class{
+  background-color: red;
+}
