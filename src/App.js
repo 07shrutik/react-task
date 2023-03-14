@@ -1,41 +1,71 @@
-import React, { Fragment ,useState} from 'react';
+import React,{useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import './App.css'
-import Task2 from './Task2';
-import Task3 from './Task3';
+
+
 
 function App(){
   const [Input, setInput] = useState([])
-
-  let res
-  
-  function handleChange(e,){
+  const [pending, setpending] = useState(0)
+ 
+  let res 
+  function handleChange(e){
     return(
       res=e.target.value
     )
   }
+
   
   function handleSubmit(){
-  
+    setpending(pending+1)
       return setInput([...Input,res])
   
   }
+  
+  
+  function handleDelete(arg){
+    const res=Input.filter((num)=>num!==arg)
+    setpending(pending-1)
+      return  setInput(res)
+  
+  }
+  const handleComplete = (id) => { 
+    setInput(Input => Input.map(num => {
+      if (num === id) {
+        return (
+          <span style={{textDecoration:"line-through"}}>
+            {num}  
+          </span>
+        )
+      }
+       else {
+        return num;
+      }
+    }));
+    setpending(pending-1)
+  };
+
   return(
-    <Fragment>
-      <h1>Task-1</h1>
-     <input onChange={handleChange}/>
-     <button onClick={handleSubmit}>Submit</button>
-        {Input.map((num)=>(<p>{num}</p>))}
-      <br />
-      <h1>Task-2</h1>
-      <br />
-      <Task2 />
-      <br />
-      <h1>Task-3</h1>
-      
-      <Task3 />
-    </Fragment>
-  )
+  <div className='container'>
+      <div className='box'>
+        <h1 >Pending Tasks - {(pending)}</h1>
+          <div className='box-inside'>
+            {Input.map((num)=>(
+              <p key={num}>{num}
+                <span>
+                  <button className='btn-cmplte' onClick={() => handleComplete(num)}>Complete</button>
+                  <button className='btn-delete' onClick={() => handleDelete(num)}><FontAwesomeIcon icon={faTrash}/></button> 
+                </span>
+              </p>))}
+          </div>
+        <input onChange={handleChange}/>
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
+  </div>
+)
 }
 
 
 export default App;
+

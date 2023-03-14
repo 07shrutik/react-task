@@ -1,27 +1,15 @@
-import React ,{useState} from 'react';
+import React ,{Fragment} from 'react';
 
-function Task2() {
-    const [count, setcount] = useState(0)
+function Task2(props) {
+        <Fragment>
 
-    
-    function handleInc(){
-    
-            return setcount(count+1)
-    
-    }
-    function handleDec(){
-    
-            return setcount(count-1)
-    
-    }
-    
-    return(
-        <>
-     <button onClick={handleInc}>Increase</button>   
-     <h1>{count}</h1>
-     <button onClick={handleDec}>Decrease</button>   
-     </>
-    )
+        <p key={props.num}>{props.num}
+        <span>
+          <button onClick={() => props.handleComplete(props.num)}>Complete</button>
+          <button onClick={() => props.handleDelete(props.num)}>delete</button> 
+        </span>
+      </p>
+        </Fragment>
 }
 
 export default Task2;
