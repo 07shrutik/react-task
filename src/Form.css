@@ -1,0 +1,69 @@
+body{
+    display: flex;
+    width: 100%;
+    height: 720px;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid rgb(230, 223, 223); */
+    width: 500px;
+    height: 350px;
+    box-shadow: 2px 0px rgb(227, 222, 227);
+    justify-content: center;
+    align-items: center;
+}
+.container input{
+    border-color: rgb(22, 195, 195);
+    width: 230px;
+    height: 20px;
+    padding: 3px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.container span{
+    margin-right: 170px;
+    margin-bottom: 2PX;
+    
+}
+.container label{
+    margin-right: 170px;
+    margin-bottom: 2PX;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* color: rgb(85, 16, 214); */
+    color: rgb(118, 114, 114);
+}
+.lower button{
+    background-color:blue;
+    border-radius: 2px;
+    border: 0.5px solid blue;
+color: white;
+width: 70px;
+height: 30px;
+align-items: center;
+margin-left: 58px;
+}
+.mid{
+    display: flex;
+    width: 243px;
+    justify-content: space-between;
+}
+.mid button{
+    font-size: 12px;
+    background-color: white;
+    border:0px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* .label{
+display: inline-block;
+text-align: center;
+padding: 10px 15px;
+} */
+
+/* .mid input{
+right: 0px;
+} */

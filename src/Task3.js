@@ -1,18 +1,12 @@
-  import React,{useState} from 'react'
+  import React from 'react'
+  import './App.css'
   
-  function Task3() {
-    const [Name, setName] = useState("Amit")
-    
-    const handleChange=()=>{
-    
-        setName(Name==="Amit" ? "Rajan" : "Amit")
-    
-    }
-    return (
-      <div>
-        <h1>My name is {Name}</h1>
-        <button onClick={handleChange}>Change-Name</button>
-      </div>
+  function Task3(props) {
+    return(
+      <div className='container'>
+      <img src={props.image} alt="logo" />
+      <button onClick={props.handleChange}>{props.BtnName}</button>
+    </div>
     )
   }
   
