@@ -1,21 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Header from './components/Header';
 import './index.css';
-// import Form from './Form';
 import reportWebVitals from './reportWebVitals';
-// import Check from './Check';
-import App from './App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-
-    {/* Task-2 */}
-    {/* <Form /> */}
-    
-    {/* task-3 */}
-    {/* <Check /> */}
+  <Header />
   </React.StrictMode>
 );
 
