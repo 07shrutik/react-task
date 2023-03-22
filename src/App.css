@@ -1,15 +1,3 @@
-body{
-  padding: 100px;
-}
-.container{
-  border: 2px solid black;
-  display: flex;
-}
-.container img{
-  height: 700px;
-  width: 50%;
-  box-shadow: 2px 0px black;
-}
-.container button{
-  margin: auto;
+.App h1{
+    text-align: center;
 }

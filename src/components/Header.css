@@ -15,6 +15,11 @@ align-items: center;
 .lists{
     display: flex;
     padding-left: 50px;
+  }
+  .lists-2{
+    display: flex;
+    padding-left: 80rem;
+
 }
 .header ul li{
     list-style: none;

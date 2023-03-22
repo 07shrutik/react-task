@@ -21,9 +21,11 @@ const Header = () => {
                 <li>Services</li>
                 <li>Contact</li>
                 <li>AboutUs</li>
+            </ul>
+              <ul className="lists-2">
                 <li>Login</li>
                 <li>SignUp</li>
-            </ul>
+              </ul>
         {/* <button className='contact'>Contact-Us</button> */}
         <button className="menu-toggle" onClick={handleClick}>
           {isMenuOpen ? <FontAwesomeIcon icon={faXmark} />: <FontAwesomeIcon icon={faBars} />}
