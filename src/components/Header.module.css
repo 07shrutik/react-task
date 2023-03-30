@@ -1,0 +1,44 @@
+.main{
+    display: flex;
+    background-color: skyblue;
+    height: 68px;
+    justify-content: flex-end;
+}
+.main ul{
+    display: flex;
+    list-style: none;
+    padding-right: 100px;
+    /* justify-content: end; */
+}
+.main ul li{
+    display: inline-block;
+    color: red;
+    padding-right: 55px;
+    /* right: 0px; */
+}
+
+.main a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+/* CSS for active link */
+.main a.active {
+  color: #fff;
+  background-color: #333;
+}
+
+/* CSS for hover effect */
+.main a:hover {
+  color: #fff;
+  /* background-color: #333; */
+}
+/* .main a:active{
+    color: aliceblue;
+} */
+/* .main a:not(.active):hover {
+    opacity: 0.7;
+  } */
+
