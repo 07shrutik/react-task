@@ -1,11 +1,11 @@
 import React from "react";
-import Assign2 from "./components/Assign2";
+import Assign3 from "./components/Assign3";
 import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <Assign2 />
+      <Assign3 />
     </div>
   );
 };
