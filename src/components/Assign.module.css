@@ -1,0 +1,18 @@
+.main{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+table,td,th{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+}
+label{
+    font-size: larger;
+}
