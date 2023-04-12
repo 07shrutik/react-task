@@ -1,11 +1,10 @@
 import React from "react";
-import "./App.css";
-import Assign5 from "./components/Assign5";
+import Assign6 from "./components/Assign6";
 
 const App = () => {
   return (
     <div>
-      <Assign5 />
+      <Assign6 />
     </div>
   );
 };
