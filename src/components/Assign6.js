@@ -1,52 +1,79 @@
 import React, { useState } from "react";
 import "./Assign6.css";
+import Option from "./Option";
+import TableData from "./TableData";
 
 export default function Assign6() {
-  const [data, setdata] = useState([]);
-  const [defaultdata, setdefaultdata] = useState("");
-  const [inputvalue, setinputvalue] = useState([]);
+  const [data, setdata] = useState([""]);
+  const [finaltotal, setfinaltotal] = useState(0);
+  const [options, setoptions] = useState([
+    { selects: "", input: "", total: "" },
+  ]);
+  const [isBill, setisBill] = useState(false);
+  const [name, setname] = useState("");
+  const currentDate = new Date().toLocaleDateString();
 
-  function handleclick() {
-    setdata((prevdata) => [...prevdata, " "]);
+  function handleCustomerName(e) {
+    setname(e.target.value);
   }
+
+  function handleClick() {
+    setdata((prevdata) => [...prevdata, ""]);
+    setoptions([...options, { selects: "", input: "", total: "" }]);
+  }
+
+  function handleSelectChange(e, index) {
+    const temp = [...options];
+    temp[index].selects = e.target.value;
+    setoptions(temp);
+  }
+
   function handleChange(e, index) {
-    const temp = [...inputvalue];
-    temp[index] = e.target.value;
-    setinputvalue(temp);
+    const temp = [...options];
+    temp[index].input = e.target.value;
+    setoptions(temp);
   }
-  function handleValue(e) {
-    setdefaultdata(e.target.value);
+
+  function createBill() {
+    var price = 20;
+    var sum = 0;
+    for (let i = 0; i < options.length; i++) {
+      let res;
+      var temp = [...options];
+      res = Number(options[i].input) * price;
+      temp[i].total = res;
+      //   temp[i].total = res;
+      setoptions(temp);
+      sum = sum + Number(temp[i].total);
+    }
+    setfinaltotal(sum);
+    setisBill(true);
   }
   return (
-    <div className="main">
-      {data.map((item, index) => (
+    <div>
+      <label>
+        Customer Name
         <input
-          placeholder="Type.."
-          onChange={(event) => handleChange(event, index)}
+          style={{ width: "120px" }}
+          type="text"
+          placeholder="Enter Name"
+          onChange={handleCustomerName}
         />
-      ))}
-
-      <div className="box">
-        <input placeholder="Type.." onChange={handleValue} />
-        <button onClick={handleclick}>Add</button>
-      </div>
-
-      <h3>Preview Your Data</h3>
-
-      {!(inputvalue.length <= 0) &&
-        inputvalue.map((item, index) => (
-          <li key={index}>
-            <span>Data from Field {index + 1}:- </span>
-            <b>{item}</b>
-          </li>
-        ))}
-
-      {defaultdata && (
-        <li>
-          <span>Data from Field {data.length + 1}:- </span>
-          <b>{defaultdata}</b>
-        </li>
-      )}
+      </label>
+      <Option
+        data={data}
+        handleSelectChange={handleSelectChange}
+        handleChange={handleChange}
+        handleClick={handleClick}
+      />
+      <TableData
+        isBill={isBill}
+        name={name}
+        currentDate={currentDate}
+        options={options}
+        finaltotal={finaltotal}
+      />
+      <button onClick={createBill}>Generate Bill</button>
     </div>
   );
 }
