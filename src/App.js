@@ -1,10 +1,10 @@
 import React from "react";
-import Assign6 from "./components/Assign6";
+import Assign7 from "./components/Assign7";
 
 const App = () => {
   return (
     <div>
-      <Assign6 />
+      <Assign7 />
     </div>
   );
 };
