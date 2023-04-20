@@ -56,3 +56,29 @@ p{
 .video1{
     box-shadow: 5px 10px #e20e0e;
 }
+@media screen and (max-width: 600px) {
+    .section2_about {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .section2_inner1,
+    .section2_inner2,
+    .section3_about {
+      margin: 3rem 0;
+    }
+    
+    .section3_about {
+      flex-direction: column-reverse;
+    }
+    
+    .about_txt,
+    .why_txt {
+      font-size: 30px;
+    }
+    
+    .video1 {
+      width: 100%;
+    }
+  }
+  

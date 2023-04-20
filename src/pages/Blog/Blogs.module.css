@@ -38,3 +38,31 @@
   height:600px;
   margin: 0.5rem;
 }
+@media (max-width: 600px) {
+  .blogs_container {
+    margin-top: 3rem;
+  }
+
+  .h1_tag {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .training_txt {
+    margin-left: 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .blog_img_container {
+    height: 300px;
+    margin-left: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .disp_img1 {
+    width: 300px;
+    height: 400px;
+    margin: 0.5rem;
+  }
+}

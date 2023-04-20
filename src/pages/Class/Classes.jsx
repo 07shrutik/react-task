@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Navbar from "../Navbar/Navbar";
+
 import { Class_Images } from "../../assets/Images";
 import styles from "./Classes.module.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+// import Footer from "../../components/Footer/Footer";
 
 function Classes() {
   const [imgCount, setImageCount] = useState(0);
@@ -22,7 +23,7 @@ function Classes() {
   return (
     <>
       <div>
-        <Navbar />
+        
       </div>
       <section className={styles.class_container}>
         <div>
@@ -43,7 +44,9 @@ function Classes() {
             <ArrowForwardIosIcon onClick={handleNxtImg} />
           </div>
         </div>
+        
       </section>
+      {/* <Footer/> */}
     </>
   );
 }

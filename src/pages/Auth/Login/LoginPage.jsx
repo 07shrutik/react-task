@@ -1,39 +1,74 @@
-import React, { useState } from "react";
-import Button from "../../../components/Buttons/Button";
-import Input from "../../../components/Inputs/Input";
-import { useNavigate } from "react-router-dom";
-import Navbar from "../../Navbar/Navbar";
+import React, { useState } from 'react'
+import styles from './Login.module.css'
+import { useNavigate } from 'react-router-dom'
+import Button from '../../../components/Buttons/Button'
+import Footer from '../../../components/Footer/Footer'
 
-const handleClickLogin = () => {
-  alert("login page");
-};
 
-export default function LoginPage() {
-  const navigate = useNavigate();
+const LoginPage = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  
+  const handleSubmit = e => {
+    e.preventDefault()
+    const userData = {
+      username,
+      password
+    }
+    localStorage.setItem('userData', JSON.stringify(userData))
+  }
+   
+ 
+
+const navigate = useNavigate()
   const handleClickRegister = () => {
-    navigate("/register");
-  };
+    navigate('/register')
+  }
 
-  const [data, setData] = useState("");
+  function handleLogin() {
+    const Users = JSON.parse(localStorage.getItem('user')) || []
+    const filteredUsers = Users.filter((user) => {
+      return user.username.toString() === username.toString() && user.password.toString() === password.toString();
+    })
+    if (filteredUsers.length > 0) {
+      alert("Login success")
+    } else {
+      alert("Invalid credentials")
+    }
+  }
+  
   return (
-    <>
-      <div>
-        <Navbar />
-      </div>
-      <h1>this is login page</h1>
-      <Input
-        type="email"
-        onChange={(e) => setData(e.target.value)}
-        placeholder="vijay"
-      />
-      <Input
-        type="password"
-        onChange={(e) => setData(e.target.value)}
-        placeholder="vijay"
-      />
-      <Button onClick={handleClickLogin} buttonName="login" />
-      <Button onClick={handleClickRegister} buttonName="Register for Gym" />
-      <h1>{data}</h1>
-    </>
-  );
+<div> 
+  
+    <div className={styles.login}>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <label className={styles.label}>
+          UserName:
+          <input
+            type='text'
+            value={username}
+            onChange={e => setUsername(e.target.value)}
+          />
+        </label>
+        <label>
+          Password:
+          <input
+            type='password'
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            className={styles.input}
+          />
+        </label>
+        <button className={styles.button} type='submit' onClick={handleLogin}>
+          Login
+        </button>
+        <Button  onClick={handleClickRegister} buttonName='Register' className={styles.ress}/>
+
+      </form>
+    </div>
+   <Footer/>
+    </div>
+  )
 }
+
+export default LoginPage

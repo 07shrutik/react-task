@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import styles from "./About.module.css";
 import { Videos } from "../../assets/Videos";
 import { Videos1 } from "../../assets/Videos";
@@ -9,7 +9,7 @@ export default function AboutUs() {
   return (
     <>
       <div>
-        <Navbar />
+       
       </div>
       <section className={styles.container_about}>
         <div className={styles.section1_about}></div>

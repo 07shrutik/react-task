@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Navbar from "../Navbar/Navbar";
+// import Navbar from "../Navbar/Navbar";
 import { Images } from "../../assets/Images";
 import styles from "./Home.module.css";
 import { useState } from "react";
@@ -30,7 +30,7 @@ function Home() {
         }}
       >
         <div>
-          <Navbar />
+          
         </div>
 
         <h1 className={styles.head_txt}>
@@ -48,9 +48,6 @@ function Home() {
       </div>
       <div>
         <Pricing />
-      </div>
-      <div>
-        <Footer />
       </div>
     </>
   );

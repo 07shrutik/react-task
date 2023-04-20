@@ -4,8 +4,8 @@
 }
 
 .head_txt{
+  margin-top: 0px;
     width: 25rem;
-    margin-top: 4.8rem;
     margin-left: 8rem;
 }
 
@@ -26,3 +26,22 @@ h1{
     color: black
 }
 
+@media screen and (max-width: 700px) {
+    .head_txt {
+      width: 50%;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      text-align: center;
+    }
+  
+    .button_carousel {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .nxt_btn,
+    .pre_btn {
+      font-size: 1.5rem;
+    }
+  }
+  
