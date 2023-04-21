@@ -2,7 +2,23 @@
 .body_word{
     color: rgb(196, 37, 37)
 }
+.container{
+    background-image: url("https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+    width: 104%;
+    height: 100vh;
+    position: relative;
+    top: 96px;
 
+    /* backgroundImage: ``, */
+    /* backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "100vw",
+    height: "100vh",
+    position: "relative", */
+  
+}
 .head_txt{
   margin-top: 0px;
     width: 25rem;

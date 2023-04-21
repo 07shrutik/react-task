@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styles from './Login.module.css'
 import { useNavigate } from 'react-router-dom'
 import Button from '../../../components/Buttons/Button'
-import Footer from '../../../components/Footer/Footer'
+
 
 
 const LoginPage = () => {
@@ -47,6 +47,7 @@ const navigate = useNavigate()
           <input
             type='text'
             value={username}
+            placeholder='UserName'
             onChange={e => setUsername(e.target.value)}
           />
         </label>
@@ -55,6 +56,7 @@ const navigate = useNavigate()
           <input
             type='password'
             value={password}
+            placeholder='Password'
             onChange={e => setPassword(e.target.value)}
             className={styles.input}
           />
@@ -66,7 +68,6 @@ const navigate = useNavigate()
 
       </form>
     </div>
-   <Footer/>
     </div>
   )
 }

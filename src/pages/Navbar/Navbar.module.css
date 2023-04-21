@@ -1,124 +1,16 @@
-/* *{
-margin: 0px;
-padding: 0px;
-}
 
-.Navbar {
-  background-color: rgb(10, 0, 0);
-  display: flex;
-  list-style-type: none;
-  text-decoration: none;
-  justify-content: space-around;
-  width: 100%;
-  height: 4.8rem;
-  position: fixed;
-  top: 0px;
-  color: white;
-  text-shadow: 2px 2px 4px #951212;
-}
-
-.Middlebar {
-  display: flex;
-  gap: 20%;
-  margin-top: 2.4rem;
-}
-
-li a {
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.logo {
-  color: rgb(242, 13, 32);
-}
-
-.buttonn {
-  border: none;
-  cursor: pointer;
-  background-color: rgb(245, 31, 24);
-  width: 5rem;
-  height: 2.5rem;
-  margin-top: 1.5rem;
-  border-radius: 0.5rem;
-  color: white;
-  margin-left: 40rem;
-}
-
-link {
-  color: red;
-}
-
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-.menutoggle {
-
-  display: none;
-  }
-  
-@media (max-width: 600px) {
-  .Navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-    height: auto;
-  }
-
-  .Middlebar {
-    margin-top: 0;
-    gap: 10%;
-    width: 100%;
-    justify-content: space-evenly;
-  }
-
-  .buttonn {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-  .Navbar{
-    display: none;
-}
-.listresponsive{
-  position: absolute;
-  display: block;
-  list-style: none;
-  width: 20%;
-  text-align: center;
-  top: 100px;
-  right: 0px;
-  color: gray;
-  background: rgb(77, 74, 74);
-}
-.listresponsive li{
-  padding-top: 10px;
-  font-size: 16px;
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-.menutoggle{
-  display: block;
-  position: absolute;
-  color: gray;
- 
-  border: none;
-  outline: none;
-  right: 20px;
- 
-  height: 37px;
-  
-  font-size: 24px;
-  
-    
-}
-} */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
   background-color: #666161f7;
- 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+
 }
 .logo{
   font-size: 3rem;
@@ -149,7 +41,7 @@ font-size: 24px;
   margin-top: 1.5rem;
   border-radius: 0.5rem;
   color: white;
- 
+ /* margin-right: 3px; */
 }
 .header ul li:last-child{
 margin-right: 4rem;
@@ -186,6 +78,7 @@ font-size: 20px;
 }
  .btn{
   display: flex;
+  left: -16px;
  }
   .lists{
       display: none;

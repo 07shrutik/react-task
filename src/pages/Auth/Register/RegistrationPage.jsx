@@ -56,7 +56,7 @@ function Registration () {
     
       <div className={styles.regbg}>
         <div className={styles.maincontentreg}>
-          <h1 style={{ color: 'white' }}>Register Here👍</h1>
+          <h1 style={{ color: 'white' }}>Register Here</h1>
           <form onSubmit={handleSubmit}>
             <div className={styles.formlogin}>
               Email{' '}
