@@ -1,23 +1,19 @@
-import React from "react";
-import Assign8 from "./components/Assign8";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import * as React from "react";
+// import "./style.css";
+import Todo from "./Todo";
+import { Provider } from "react-redux";
+import { store } from "./Slic";
+import Count from "./Count";
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<Assign8 />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <Provider store={store}>
+      <div>
+        {/* <h1>Redux :- 1</h1> */}
+        <Todo />
+        <h1>Redux :- 1.1</h1>
+        <Count />
+      </div>
+    </Provider>
   );
-};
-
-export default App;
+}
