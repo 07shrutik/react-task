@@ -23,98 +23,124 @@ import FormatIndentIncreaseOutlinedIcon from '@mui/icons-material/FormatIndentIn
 import FormatClearOutlinedIcon from '@mui/icons-material/FormatClearOutlined';
 import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 
+import DropDown from '../components/formatBar/dropDown/DropDown';
+
+
+const style={fontSize:"medium"}
+const zoomData={def:"100%", dataArr: ["Fit", "50%","75%", "90%", "100%", "125%", "150%", "200%" ]}
+// const zoomData=["Fit", 50, 75, 90, 100, 125, 150, 200 ]
+
+const stylesData={def: "Normal text", dataArr: ["Normal Text", "Title", "Subtitle", "Heading 1", "Heading 2", "Heading 3", "Heading 4"]}
+const fontData={def:"Arial", dataArr: ["Arial", "TimesNewRoman", "Calibri", "Palanquin Dark"]}
+const fontSizeData={def:"11", dataArr:["8", "9"]}
 
 const formatBar=[
     {
-        icons: <UndoIcon />,
+        icons: <UndoIcon sx={style}/>,
         description: "Undo (Ctrl+Z)"
     },
     {
-        icons: <RedoIcon />,
+        icons: <RedoIcon sx={style}/>,
         description: "Redo (Ctrl+Y)"
     },
     {
-        icons: <PrintOutlinedIcon />,
+        icons: <PrintOutlinedIcon sx={style} />,
         description: "Print"
     },
     {
-        icons: <SpellcheckOutlinedIcon />,
+        icons: <SpellcheckOutlinedIcon sx={style} />,
         description: "Spell and Grammar check"
     },
     {
-        icons: <ImagesearchRollerOutlinedIcon />,
+        icons: <ImagesearchRollerOutlinedIcon sx={style} />,
         description: "Paint format"
     },
     {
-        icons: <RemoveOutlinedIcon />,
+        icons: <DropDown optionData={zoomData} />,
+        description: "Zoom"
+    },
+    {
+        icons: <DropDown optionData={stylesData} />,
+        description: "Styles"
+    },
+    {
+        icons: <DropDown optionData={fontData} />,
+        description: "Font"
+    },
+    {
+        icons: <RemoveOutlinedIcon sx={style} />,
         description: "Decrease font size (Ctrl+Z)"
     },
     {
-        icons: <AddOutlinedIcon />,
+        icons: <DropDown optionData={fontSizeData} />,
+        description: "Styles"
+    },
+    {
+        icons: <AddOutlinedIcon sx={style} />,
         description: "Increase font size (Ctrl+Z)"
     },
     {
-        icons: <FormatBoldOutlinedIcon />,
+        icons: <FormatBoldOutlinedIcon sx={style} />,
         description: "Bold (Ctrl+Z)"
     },
     {
-        icons: <FormatItalicOutlinedIcon />,
+        icons: <FormatItalicOutlinedIcon sx={style} />,
         description: "Italic (Ctrl+Z)"
     },
     {
-        icons: <FormatUnderlinedOutlinedIcon />,
+        icons: <FormatUnderlinedOutlinedIcon sx={style} />,
         description: "Underline (Ctrl+Z)"
     },
     {
-        icons: <FormatColorTextOutlinedIcon />,
+        icons: <FormatColorTextOutlinedIcon sx={style} />,
         description: "Text color"
     },
     {
-        icons: <ModeOutlinedIcon />,
+        icons: <ModeOutlinedIcon sx={style} />,
         description: "Highlight color (Ctrl+Z)"
     },
     {
-        icons: <InsertLinkOutlinedIcon />,
+        icons: <InsertLinkOutlinedIcon sx={style} />,
         description: "Insert link (Ctrl+K)"
     },
     {
-        icons: <AddCommentOutlinedIcon />,
+        icons: <AddCommentOutlinedIcon sx={style} />,
         description: "Add comment (Ctrl+Z)"
     },
     {
-        icons: <InsertPhotoOutlinedIcon />,
+        icons: <InsertPhotoOutlinedIcon sx={style} />,
         description: "Insert image(Ctrl+Z)"
     },
     {
-        icons: <FormatAlignLeftOutlinedIcon />,
+        icons: <FormatAlignLeftOutlinedIcon sx={style} />,
         description: "Align & indent (Ctrl+Z)"
     },
     {
-        icons: <FormatLineSpacingOutlinedIcon />,
+        icons: <FormatLineSpacingOutlinedIcon sx={style} />,
         description: "Line & paragraph spacing (Ctrl+Z)"
     },
     {
-        icons: <ChecklistOutlinedIcon />,
+        icons: <ChecklistOutlinedIcon sx={style} />,
         description: "Checklist"
     },
     {
-        icons: <FormatListBulletedOutlinedIcon />,
+        icons: <FormatListBulletedOutlinedIcon sx={style} />,
         description: "Bulleted list (Ctrl+Z)"
     },
     {
-        icons: <FormatListNumberedOutlinedIcon />,
+        icons: <FormatListNumberedOutlinedIcon sx={style}/>,
         description: "Numbered list (Ctrl+Z)"
     },
     {
-        icons: <FormatIndentDecreaseOutlinedIcon />,
+        icons: <FormatIndentDecreaseOutlinedIcon sx={style}/>,
         description: "Decrease indent (Ctrl+Z)"
     },
     {
-        icons: <FormatIndentIncreaseOutlinedIcon />,
+        icons: <FormatIndentIncreaseOutlinedIcon sx={style} />,
         description: "Increase indent"
     },
     {
-        icons: <FormatClearOutlinedIcon />,
+        icons: <FormatClearOutlinedIcon sx={style} />,
         description: "Clear formatting"
     },
 ]

@@ -8,7 +8,7 @@ export default function FormatBar() {
   return (
     <div>
       <ul className={styles.formatBarIcons}>
-        {formatBar.map(icon=><li style={{margin: "0.2rem", color:"rgb(93, 91, 91)"}}key={icon.description}>{icon.icons}</li>)}
+        {formatBar.map(icon=><li style={{margin: "0.3rem", color:"rgb(93, 91, 91)", fontSize: "10"}} key={icon.description} >{icon.icons}</li>)}
       </ul>
     </div>
   )
