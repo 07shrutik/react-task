@@ -1,0 +1,11 @@
+.formatBarIcons{
+    display:flex;
+    align-items:center;
+    list-style: none;
+    /* border:1px solid; */
+    border-radius: 2.5rem;
+    margin:2rem;
+    background-color: rgb(236, 244, 255);
+    width:92vw;
+    
+}
