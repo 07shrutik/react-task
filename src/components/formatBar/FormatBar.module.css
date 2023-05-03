@@ -1,0 +1,6 @@
+.formatBarIcons{
+    display:flex;
+    list-style: none;
+    /* border:1px solid; */
+    margin:2rem;
+}
