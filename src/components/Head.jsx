@@ -169,7 +169,7 @@ const Head = () => {
           </div>
           <div className={styles.options}>
             {options.map((option, index) => (
-              <li key={index} style={{ listStyle: "none" }}>
+             
                 <div className={styles.dropdown}>
                   <button className={styles.dropbtn}>{option.label}</button>
                   <div className={styles.dropdowncontent}>
@@ -181,7 +181,7 @@ const Head = () => {
                     ))}
                   </div>
                 </div>
-              </li>
+             
             ))}
           </div>
         </div>
