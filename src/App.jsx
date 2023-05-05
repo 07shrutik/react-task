@@ -1,10 +1,9 @@
 // import React from 'react'
 import Head from "./components/Head";
-
+// import { RecoilRoot } from "recoil";
 import FormatBar from "./components/formatBar/FormatBar";
 
 import TextArea from "./components/TextArea";
-
 
 const App = () => {
   return (
@@ -12,9 +11,7 @@ const App = () => {
       <Head />
 
       <FormatBar />
-
       <TextArea />
-
     </div>
   );
 };
