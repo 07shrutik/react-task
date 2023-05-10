@@ -1,0 +1,13 @@
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.App input{
+    margin-bottom: 10px;
+}
+.btn button{
+    margin: 10px;
+}
